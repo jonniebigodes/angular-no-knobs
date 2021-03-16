@@ -3,24 +3,24 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 
 import { CommonModule } from '@angular/common';
 
-import { TaskListComponent } from './task-list.component';
+import { PureTaskListComponent } from './pure-task-list.component';
 import { TaskComponent } from './task.component';
 import * as TaskStories from './task.stories';
 
 export default {
-  component: TaskListComponent,
+  component: PureTaskListComponent,
   decorators: [
     moduleMetadata({
       //👇 Imports both components to allow component composition with storybook
-      declarations: [TaskListComponent, TaskComponent],
+      declarations: [PureTaskListComponent, TaskComponent],
       imports: [CommonModule],
     }),
   ],
-  title: 'TaskList',
+  title: 'PureTaskList',
 } as Meta;
 
-const Template: Story<TaskListComponent> = (args) => ({
-  component: TaskListComponent,
+const Template: Story<PureTaskListComponent> = (args) => ({
+  component: PureTaskListComponent,
   props: {
     ...args,
     onPinTask: TaskStories.actionsData.onPinTask,
@@ -28,7 +28,7 @@ const Template: Story<TaskListComponent> = (args) => ({
   },
   template: `
     <div style="padding: 3rem">
-      <app-task-list [tasks]="tasks" [loading]=loading (onPinTask)="onPinTask($event)" (onArchiveTask)="onArchiveTask($event)"></app-task-list>
+      <app-pure-task-list [tasks]="tasks" [loading]=loading (onPinTask)="onPinTask($event)" (onArchiveTask)="onArchiveTask($event)"></app-pure-task-list>
     </div> `,
 });
 

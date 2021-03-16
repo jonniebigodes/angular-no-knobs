@@ -31,6 +31,9 @@
     "@angular/platform-browser": "~11.0.6",
     "@angular/platform-browser-dynamic": "~11.0.6",
     "@angular/router": "~11.0.6",
+    "@ngxs/devtools-plugin": "^3.7.1",
+    "@ngxs/logger-plugin": "^3.7.1",
+    "@ngxs/store": "^3.7.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -100,7 +103,6 @@
     "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>/src/jest-config/__mocks__/styleMock.js",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/jest-config/__mocks__fileMock.js"
-      
     },
     "transform": {
       "^.+\\.(ts|html)$": "ts-jest",
